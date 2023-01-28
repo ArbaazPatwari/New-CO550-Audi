@@ -109,5 +109,11 @@ public static class SeedData
         {
             return;   // DB has been seeded
         }
+
+        context.Customers.AddRange(
+            
+        );
+
+        context.SaveChanges();
     }
 }
