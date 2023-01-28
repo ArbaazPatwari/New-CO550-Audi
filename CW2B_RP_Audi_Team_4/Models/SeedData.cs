@@ -111,7 +111,7 @@ public static class SeedData
         }
 
         context.Customers.AddRange(
-            
+            // Todo Add customers here
         );
 
         context.SaveChanges();
