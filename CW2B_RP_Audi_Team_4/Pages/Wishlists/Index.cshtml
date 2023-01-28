@@ -1,0 +1,48 @@
+﻿@page
+@model CW2B_RP_Audi_Team_4.Pages.Wishlists.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Wishlist[0].ModelName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Wishlist[0].Description)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Wishlist[0].CustomerName)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Wishlist) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ModelName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Description)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CustomerName)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.WishlistID">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.WishlistID">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.WishlistID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

@@ -1,0 +1,44 @@
+﻿@page
+@model CW2B_RP_Audi_Team_4.Pages.Wishlists.CreateModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Wishlist</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Wishlist.ModelName" class="control-label"></label>
+                <input asp-for="Wishlist.ModelName" class="form-control" />
+                <span asp-validation-for="Wishlist.ModelName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Wishlist.Description" class="control-label"></label>
+                <input asp-for="Wishlist.Description" class="form-control" />
+                <span asp-validation-for="Wishlist.Description" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Wishlist.CustomerName" class="control-label"></label>
+                <input asp-for="Wishlist.CustomerName" class="form-control" />
+                <span asp-validation-for="Wishlist.CustomerName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
