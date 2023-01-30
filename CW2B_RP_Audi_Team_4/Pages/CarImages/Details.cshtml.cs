@@ -23,12 +23,12 @@ namespace CW2B_RP_Audi_Team_4.Pages.CarImages
 
         public async Task<IActionResult> OnGetAsync(int? id)
         {
-            if (id == null || _context.CarImage == null)
+            if (id == null || _context.CarImages == null)
             {
                 return NotFound();
             }
 
-            var carimage = await _context.CarImage.FirstOrDefaultAsync(m => m.CarImageID == id);
+            var carimage = await _context.CarImages.FirstOrDefaultAsync(m => m.CarImageID == id);
             if (carimage == null)
             {
                 return NotFound();

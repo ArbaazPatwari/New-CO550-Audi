@@ -23,9 +23,9 @@ namespace CW2B_RP_Audi_Team_4.Pages.Orders
 
         public async Task OnGetAsync()
         {
-            if (_context.Order != null)
+            if (_context.Orders != null)
             {
-                Order = await _context.Order.ToListAsync();
+                Order = await _context.Orders.ToListAsync();
             }
         }
     }

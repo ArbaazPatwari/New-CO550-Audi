@@ -23,9 +23,9 @@ namespace CW2B_RP_Audi_Team_4.Pages.CarImages
 
         public async Task OnGetAsync()
         {
-            if (_context.CarImage != null)
+            if (_context.CarImages != null)
             {
-                CarImage = await _context.CarImage.ToListAsync();
+                CarImage = await _context.CarImages.ToListAsync();
             }
         }
     }

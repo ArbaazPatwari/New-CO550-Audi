@@ -25,12 +25,12 @@ namespace CW2B_RP_Audi_Team_4.Pages.Orders
 
         public async Task<IActionResult> OnGetAsync(int? id)
         {
-            if (id == null || _context.Order == null)
+            if (id == null || _context.Orders == null)
             {
                 return NotFound();
             }
 
-            var order =  await _context.Order.FirstOrDefaultAsync(m => m.OrderID == id);
+            var order =  await _context.Orders.FirstOrDefaultAsync(m => m.OrderID == id);
             if (order == null)
             {
                 return NotFound();
@@ -71,7 +71,7 @@ namespace CW2B_RP_Audi_Team_4.Pages.Orders
 
         private bool OrderExists(int id)
         {
-          return _context.Order.Any(e => e.OrderID == id);
+          return _context.Orders.Any(e => e.OrderID == id);
         }
     }
 }

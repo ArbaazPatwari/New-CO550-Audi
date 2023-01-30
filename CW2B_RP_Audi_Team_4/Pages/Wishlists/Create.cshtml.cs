@@ -36,7 +36,7 @@ namespace CW2B_RP_Audi_Team_4.Pages.Wishlists
                 return Page();
             }
 
-            _context.Wishlist.Add(Wishlist);
+            _context.Wishlists.Add(Wishlist);
             await _context.SaveChangesAsync();
 
             return RedirectToPage("./Index");

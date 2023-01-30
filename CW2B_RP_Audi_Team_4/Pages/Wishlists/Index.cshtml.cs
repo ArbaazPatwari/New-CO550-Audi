@@ -23,9 +23,9 @@ namespace CW2B_RP_Audi_Team_4.Pages.Wishlists
 
         public async Task OnGetAsync()
         {
-            if (_context.Wishlist != null)
+            if (_context.Wishlists != null)
             {
-                Wishlist = await _context.Wishlist.ToListAsync();
+                Wishlist = await _context.Wishlists.ToListAsync();
             }
         }
     }

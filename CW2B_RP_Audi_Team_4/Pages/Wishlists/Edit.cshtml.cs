@@ -25,12 +25,12 @@ namespace CW2B_RP_Audi_Team_4.Pages.Wishlists
 
         public async Task<IActionResult> OnGetAsync(int? id)
         {
-            if (id == null || _context.Wishlist == null)
+            if (id == null || _context.Wishlists == null)
             {
                 return NotFound();
             }
 
-            var wishlist =  await _context.Wishlist.FirstOrDefaultAsync(m => m.WishlistID == id);
+            var wishlist =  await _context.Wishlists.FirstOrDefaultAsync(m => m.WishlistID == id);
             if (wishlist == null)
             {
                 return NotFound();
@@ -71,7 +71,7 @@ namespace CW2B_RP_Audi_Team_4.Pages.Wishlists
 
         private bool WishlistExists(int id)
         {
-          return _context.Wishlist.Any(e => e.WishlistID == id);
+          return _context.Wishlists.Any(e => e.WishlistID == id);
         }
     }
 }

@@ -9,8 +9,8 @@ namespace CW2B_RP_Audi_Team_4.Models
 {
     public class Customer
     {
-        [Display(Name = "CustomerID")]
-        [StringLength(10)]
+        //[Display(Name = "CustomerID")]
+        //[StringLength(10)]
         public int CustomerID { get; set; }
 
         [Display(Name = "CustomerName")]
